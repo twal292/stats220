@@ -8,7 +8,7 @@
 2. I am taking **STATS 220** because I need more 2nd year science papers.
 3. I am interested in learning about [**blue penguins**](https://en.wikipedia.org/wiki/Little_penguin).
 
-![https://media.tenor.com/0emsXzzWKMkAAAAM/penguins-and-phillip-island-private-tours.gif]
+![](https://media.tenor.com/0emsXzzWKMkAAAAM/penguins-and-phillip-island-private-tours.gif)
 
 * I look forward to an exciting semester learning Data Technologies!
 * <em>A meme that captures how I currently feel about my university studies is:</em>
