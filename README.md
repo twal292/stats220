@@ -1,6 +1,9 @@
+# Heading level 1
+
 # stats220
 
-** Heading 1 **
+
+## Heading level 2
 
 This is my repo for STATS 220. 
 
