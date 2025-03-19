@@ -4,7 +4,7 @@
 
 <em>A little about me:</em>
 
-1. I am undertaking a degree in **Finance** & **Statistics**.
+1. I am undertaking a degree in [**Finance**](https://media.tenor.com/tWLm4R_W3-MAAAAM/financial-advisor-jet760.gif) & **Statistics**.
 2. I am taking **STATS 220** because I need more 2nd year science papers.
 3. I am interested in learning about **blue penguins**.
 
