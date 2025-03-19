@@ -4,7 +4,7 @@
 
 <em>A little about me:</em>
 
-1. I am undertaking a degree in [**Finance**](https://media.tenor.com/tWLm4R_W3-MAAAAM/financial-advisor-jet760.gif) & [**Statistics**](https://media.tenor.com/80EXmSbQc2MAAAAM/andre-braugher-statistics-is-so-beautiful.gif).
+1. I am undertaking a degree in [**Finance**](https://en.wikipedia.org/wiki/Finance) & [**Statistics**](https://en.wikipedia.org/wiki/Statistics).
 2. I am taking **STATS 220** because I need more 2nd year science papers.
 3. I am interested in learning about [**blue penguins**](https://media.tenor.com/0emsXzzWKMkAAAAM/penguins-and-phillip-island-private-tours.gif).
 
