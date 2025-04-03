@@ -85,7 +85,7 @@ ggplot(data = latest_data,
   geom_bar() +
   scale_fill_manual(values = c("#e67c73", "#f7cb4d", "#41b375", "#7baaf7", "#b67c8a", "#b2eca7", "#0869af", "#ed553b" ) ) +
   theme_minimal() +
-  labs(x = "Size",
+  labs(x = "Colour",
        y = "Number of Observations",
        title = "Number of Each Dog Colour Observed on Onewa Road",
        fill = "")
@@ -96,7 +96,7 @@ ggplot(data = latest_data,
   geom_bar() +
   scale_fill_manual(values = c("#e67c73", "#f7cb4d", "#41b375", "#7baaf7", "#b67c8a", "#b2eca7", "#0869af", "#ed553b" ) ) +
   theme_minimal() +
-  labs(x = "Size",
+  labs(x = "Colour",
        y = "Number of Observations",
        title = "Size Breakdown of Each Dog Colour Observed on Onewa Road",
        fill = "")
