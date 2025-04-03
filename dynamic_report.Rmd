@@ -1,0 +1,107 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body{
+  font-family: 'Times New Roman';
+}
+
+h1 {
+  color: #000000;
+  background-color: #D3D3D3;
+  padding: 10px;
+  font-weight: bold;
+}
+
+h2 {
+  color: #000;
+  font-weight: bold;
+}
+```
+
+## Onewa Road Dogs Investigation
+
+This survey is an investigation into the viability of opening a black-haired small-dog grooming business on Onewa Road. To check this I conducted an observational logging survey where I recorded each dog that walked past my house on Monday 31 March between 3pm - 4pm.
+
+The data collected was as follows:
+
+  **1. How many people were walking the dog?**
+  
+This question simply required a whole numbered input.
+
+  **2. What was the approximate size of the dog?**
+  
+This question required a rating between 1 Very small, and 5 Very large.
+
+  **3. What colour was the dog?**
+  
+This question required choosing from a multitude of options. Also included a don't know option in case this wasn't easily answerable.
+
+After this data was collected it was published to a google sheets linked to the google form. This data was then read into R:
+```{r}
+library(tidyverse)
+
+## Reading in google form data
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vS6wYEB-Lu9aLOT9p1mwaJ3XEnD688CgUNE2LXJJbG9Ls9ibDUx2OYGD5PbUydGTfMQt11BvLGRhNOa/pub?output=csv")
+
+```
+
+Next, the column names of the data frame were cleaned up:
+```{r}
+## Giving appropriate names to each data frame column
+latest_data <- logged_data %>%
+  rename(People = "1. How many people were walking the dog?",
+         Size = "2. What was the approximate size of the dog?",
+         Colour = "3. What colour was the dog?")
+```
+
+Two summary values were obtained from the data:
+```{r}
+## Finding a summary value for the average dog size rating
+latest_data$Size %>% mean()
+
+paste("The average value for a dog's size rating was", latest_data$Size %>% mean(), ".")
+
+## Finding a range to see the minimum and maximum amount of people walking each dog
+latest_data$People %>% range()
+
+paste("The minimum and maximum amount of people walking each dog recorded was", latest_data$People %>% range(), ".")
+
+```
+
+
+Two bar charts that excellently summarise the data needed for this investigation:
+```{r}
+## Bar graph to see how common each coloured dog was
+ggplot(data = latest_data,
+       mapping = aes(x = Colour, fill = as.factor(Colour))) +
+  geom_bar() +
+  scale_fill_manual(values = c("#e67c73", "#f7cb4d", "#41b375", "#7baaf7", "#b67c8a", "#b2eca7", "#0869af", "#ed553b" ) ) +
+  theme_minimal() +
+  labs(x = "Size",
+       y = "Number of Observations",
+       title = "Number of Each Dog Colour Observed on Onewa Road",
+       fill = "")
+
+## Bar graph to see a breakdown in the size of each coloured dog
+ggplot(data = latest_data,
+       mapping = aes(x = Colour, fill = as.factor(Size))) +
+  geom_bar() +
+  scale_fill_manual(values = c("#e67c73", "#f7cb4d", "#41b375", "#7baaf7", "#b67c8a", "#b2eca7", "#0869af", "#ed553b" ) ) +
+  theme_minimal() +
+  labs(x = "Size",
+       y = "Number of Observations",
+       title = "Size Breakdown of Each Dog Colour Observed on Onewa Road",
+       fill = "")
+```
+
+
+
+
